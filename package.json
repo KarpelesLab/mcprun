@@ -1,0 +1,18 @@
+{
+  "name": "mcp-http-client",
+  "version": "1.0.0",
+  "description": "Self-contained MCP HTTP client for Node.js",
+  "main": "dist/mcp-client.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "keywords": ["mcp", "model-context-protocol", "jsonrpc", "http"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {}
+}
