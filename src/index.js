@@ -79,6 +79,18 @@ class MCPClient {
   }
 
   /**
+   * Get a proxy object for calling tools with method syntax
+   * Usage: client.tools.toolName({ arg: 'value' })
+   */
+  get tools() {
+    return new Proxy({}, {
+      get: (target, toolName) => {
+        return (args = {}) => this.callTool(toolName, args);
+      }
+    });
+  }
+
+  /**
    * List available resources from the MCP server
    */
   async listResources() {

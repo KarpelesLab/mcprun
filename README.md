@@ -24,7 +24,12 @@ await client.initialize({ name: 'my-client', version: '1.0.0' });
 
 // List and call tools
 const tools = await client.listTools();
+
+// Method 1: Direct call
 const result = await client.callTool('tool-name', { arg1: 'value' });
+
+// Method 2: Syntax sugar
+const result = await client.tools.tool_name({ arg1: 'value' });
 
 // Multiple servers
 const clients = createClients({

@@ -6,9 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'mcp-client.js',
     library: {
-      name: 'MCPClient',
-      type: 'var',
-      export: 'default'
+      type: 'commonjs2'
     },
     globalObject: 'this'
   },
